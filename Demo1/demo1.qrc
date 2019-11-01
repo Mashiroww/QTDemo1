@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>model.txt</file>
+        <file>branch-end.png</file>
+        <file>branch-more.png</file>
+        <file>vline.png</file>
+        <file>branch-close.png</file>
+        <file>branch-open.png</file>
+        <file>Iline.png</file>
+        <file>Lline.png</file>
+        <file>Tline.png</file>
+    </qresource>
+</RCC>
