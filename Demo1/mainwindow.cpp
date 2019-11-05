@@ -73,8 +73,8 @@ void MainWindow::reset()
     for(int i = 1; i <= 3; i++)
     {
         QWidget *page = ui->stackedWidget->findChild<QWidget*>(QString("page_%0").arg(i));
-        QList<QWidget*> pageItems = page->findChildren<QWidget*>();
-        foreach(QWidget* item, pageItems)
+        QList<QLabel*> pageItems = page->findChildren<QLabel*>();
+        foreach(QLabel* item, pageItems)
         {
             delete item;
         }
@@ -82,7 +82,8 @@ void MainWindow::reset()
         label->setText(QString("Page%0").arg(i));
         label->setObjectName(QString("label_%0").arg(i));
         label->setAlignment(Qt::AlignCenter | Qt::AlignVCenter);
-        label->setGeometry(x(), y(), 250, 250);
+        label->setGeometry(0, 0, 250, 250);
+        label->setHidden(false);
         QFont ft;
         ft.setPointSize(20);
         label->setFont(ft);
@@ -146,11 +147,14 @@ void MainWindow::setTree()
 
 void MainWindow::on_treeView_clicked(const QModelIndex &index)
 {
+
     QString clickStr = index.data().toString();
     if(clickStr.startsWith("Part "))
     {
         int pageIdx = clickStr.mid(5).toInt() - 1;
         ui->stackedWidget->setCurrentIndex(pageIdx);
+
+
     }
     else
     {
@@ -161,6 +165,7 @@ void MainWindow::on_treeView_clicked(const QModelIndex &index)
        QLabel *nowLabel = nowPage->findChild<QLabel*>(QString("label_%0").arg(pageIdx+1));
        nowLabel->setText(QString("Page%0 %1").arg(pageIdx+1).arg(clickStr));
     }
+
 }
 
 void MainWindow::on_treeView_customContextMenuRequested(const QPoint &pos)

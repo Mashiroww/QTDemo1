@@ -26,14 +26,17 @@ CONFIG += c++11
 
 SOURCES += \
         editmaterial.cpp \
+        editmaterialdesc.cpp \
         main.cpp \
         mainwindow.cpp
 
 HEADERS += \
         editmaterial.h \
+        editmaterialdesc.h \
         mainwindow.h
 
 FORMS += \
+        editMaterialDescription.ui \
         editMaterialDialog.ui \
         mainwindow.ui
 

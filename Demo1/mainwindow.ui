@@ -24,11 +24,44 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
-    <widget class="QWidget" name="page_1"/>
-    <widget class="QWidget" name="page_2"/>
-    <widget class="QWidget" name="page_3"/>
+    <widget class="QWidget" name="page_1">
+     <widget class="QTextBrowser" name="text_1">
+      <property name="geometry">
+       <rect>
+        <x>105</x>
+        <y>51</y>
+        <width>301</width>
+        <height>261</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QTextBrowser" name="text_2">
+      <property name="geometry">
+       <rect>
+        <x>105</x>
+        <y>51</y>
+        <width>301</width>
+        <height>261</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QTextBrowser" name="text_3">
+      <property name="geometry">
+       <rect>
+        <x>105</x>
+        <y>51</y>
+        <width>301</width>
+        <height>261</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QTreeView" name="treeView">
     <property name="geometry">
